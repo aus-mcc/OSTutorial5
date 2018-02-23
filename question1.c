@@ -4,13 +4,13 @@
 #include <unistd.h> // Needed for sleep
 #include <pthread.h>
 
-void hello_world(){
+void *hello_world(){
     int random = rand()%5;
     sleep(random);
     printf("Hello World\n");
     pthread_exit(NULL);
 }
-void goodbye(){
+void *goodbye(){
     int random2 = rand()%5;
     sleep(random2);
     printf("Goodbye\n");
